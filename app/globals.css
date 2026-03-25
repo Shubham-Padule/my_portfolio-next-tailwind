@@ -24,3 +24,31 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* globals.css */
+
+/* Purane scrollbar ko hide karke naya styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712; /* Aapka body background color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4f46e5; /* Indigo-600 */
+  border-radius: 10px;
+  border: 2px solid #030712; /* Track aur thumb ke beech gap ke liye */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1; /* Indigo-500 hover par thoda bright */
+}
+
+/* Firefox ke liye */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4f46e5 #030712;
+}
