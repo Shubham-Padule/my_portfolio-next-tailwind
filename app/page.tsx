@@ -24,6 +24,21 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
+
+
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setIsLoading(false);
+    
+    
+    document.documentElement.style.cursor = 'none';
+    document.body.style.cursor = 'none';
+
+    window.scrollTo(0, 0);
+  }, 2500);
+
+  return () => clearTimeout(timer);
+}, []);
   return (
     <main className="bg-[#030712] min-h-screen selection:bg-indigo-500/30">
       <AnimatePresence mode="wait">
