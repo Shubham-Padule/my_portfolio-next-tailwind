@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaGithub, FaTerminal } from 'react-icons/fa';
 import { SiMongodb, SiFramer, SiExpress, SiNextdotjs } from 'react-icons/si';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -52,13 +53,23 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-5 w-full sm:w-auto">
-            <button className="w-full sm:w-auto px-8 py-4 bg-indigo-600 text-white font-bold rounded-2xl hover:bg-indigo-700 transition-all shadow-[0_20px_40px_-10px_rgba(79,70,229,0.4)] text-center">
-              View Projects
-            </button>
-            <button className="w-full sm:w-auto px-8 py-4 border border-white/10 bg-white/5 text-white font-bold rounded-2xl hover:bg-white/10 transition-all text-center">
-              Download CV
-            </button>
-          </div>
+  {/* View Projects Button */}
+  <Link 
+    href="#projects" 
+    className="w-full sm:w-auto px-8 py-4 bg-indigo-600 text-white font-bold rounded-2xl hover:bg-indigo-700 transition-all shadow-[0_20px_40px_-10px_rgba(79,70,229,0.4)] text-center"
+  >
+    View Projects
+  </Link>
+
+  {/* Download CV Link */}
+  <a 
+    href="/Shubham_Padule_Resume_PDF.pdf" 
+    download="Shubham_Padule_Resume_PDF.pdf"
+    className="w-full sm:w-auto px-8 py-4 border border-white/10 bg-white/5 text-white font-bold rounded-2xl hover:bg-white/10 transition-all text-center flex items-center justify-center"
+  >
+    Download CV
+  </a>
+</div>
         </motion.div>
 
         {/* --- RIGHT VISUAL --- */}
